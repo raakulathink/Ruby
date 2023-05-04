@@ -15,16 +15,10 @@ jobs:
         node-version: 12.x
         
     - name: npm install
- #     run: npm install
-      run: bundle install --jobs 4 --retry 3
-#      run: yarn install
-
-   #   run: npm cache clean --force
-
+      run: npm install
+ 
     - name: Lint
-  #    run: npm run lint:fix
-      run: npm run format-check
-
-
+      run: npm run lint:fix
+   
     - name: npm test
       run: npm test
