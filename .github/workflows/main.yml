@@ -13,13 +13,22 @@ jobs:
       uses: actions/setup-node@master
       with:
         node-version: 12.x
+        
+    - name: Install dependencies
+      run: |
+         sudo apt-get -yqq install libpq-dev build-essential libcurl4-openssl-dev
+          gem install bundler
+          bundle install --jobs 4 --retry 3
+          yarn install
 
     - name: npm install
-   #   run: npm install
-      run: npm cache clean --force
+      run: npm install
+   #   run: npm cache clean --force
 
     - name: Lint
-      run: npm run lint:fix
+  #    run: npm run lint:fix
+      run: npm run format-check
+
 
     - name: npm test
       run: npm test
