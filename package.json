@@ -14,8 +14,7 @@
   }
 }
 {
-  //...
-  "scripts": {
+   "scripts": {
     "lint": "eslint.js"
   }
 }
