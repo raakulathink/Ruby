@@ -13,8 +13,8 @@
     "webpack-dev-server": "^3.9.0"
   }
 }
-{
-   "scripts": {
-    "lint": "eslint.js"
-  }
-}
+#{
+#   "scripts": {
+#    "lint": "eslint.js"
+#  }
+#}
